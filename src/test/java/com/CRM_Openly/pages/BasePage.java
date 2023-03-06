@@ -23,6 +23,7 @@ public abstract class BasePage {
             if (each.getText().equalsIgnoreCase(selectionName.trim())){
                 each.click();
                 break;
+
             }
         }
     }

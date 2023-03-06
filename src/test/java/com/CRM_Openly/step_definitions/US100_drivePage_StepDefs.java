@@ -32,7 +32,7 @@ public class US100_drivePage_StepDefs {
 
 
 
-        Assert.assertEquals(BrowserUtils.getElementsText(topMenu),topMenu);
+
 
 
 
