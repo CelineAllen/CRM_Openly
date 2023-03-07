@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPageFeatures {
 
-    LoginPageFeatures(){
+   public LoginPageFeatures(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
