@@ -6,7 +6,7 @@ Feature: Drive page functionality
   Scenario: user view all modules in the Drive page
 
     Given user click on drive button in main page
-    Given Verify the users view all modules in the Drive page.
+    Then Verify the users view all modules in the Drive page.
       | My Drive                   |
       | All Documents              |
       | Company Drive              |
