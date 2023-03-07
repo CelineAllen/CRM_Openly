@@ -1,3 +1,4 @@
+@US93_AC01_TC01
 Feature: OpenlyCRM login page features
 
   Agile story: As a user, when I am on the OpenlyCRM login page
@@ -6,7 +7,7 @@ Feature: OpenlyCRM login page features
   Background: For all scenarios user is on the login page of the OpenlyCRM application
     Given user is on the login page of the OpenlyCRM application
 
-  @US93_AC01_TC01
+  @USB28G17-113
   Scenario Outline: "Remember me on this computer" checkbox feature for HelpDesk
     When user enter "<username>" and "<password>"
     Then user can check the "Remember me on this computer" checkbox
