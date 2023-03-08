@@ -28,4 +28,12 @@ public abstract class BasePage {
         }
     }
 
+
+    @FindBy(id = "user-block")
+    public WebElement btn_userProfile;
+
+
+
+
+
 }
