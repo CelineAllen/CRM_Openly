@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.util.List;
+
 
 public class US95_DeskTopStepDefs {
 
@@ -28,6 +30,11 @@ public class US95_DeskTopStepDefs {
     @Then("User should see {string}")
     public void userShouldSee(String DesktopClient) {
         BrowserUtils.verifyElementDisplayed(desktopOptionsPage.DesktopClient);
+    }
+
+    @Then("User should see below options")
+    public void userShouldSeeBelowOptions(List<String> options) {
+
     }
 }
 

@@ -6,3 +6,8 @@ Feature: User should be able to see desktop options to download
   Scenario: Verify desktop options to download
     Given User should scroll down
     Then User should see "desktop client"
+    Then User should see below options
+      | MAC OS  |
+      | WINDOWS |
+      | LINUX   |
+
