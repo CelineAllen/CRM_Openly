@@ -11,7 +11,7 @@ public class PollPage {
     }
 
     //@FindBy(xpath = "//body[@contenteditable='true']")
-    @FindBy(xpath = "//body")
+    @FindBy(xpath = "//body[@contenteditable='true']")
     public WebElement poll_body;
 
     @FindBy(id = "question_0")
@@ -21,6 +21,9 @@ public class PollPage {
     public WebElement txt_answer1;
     @FindBy(id="answer_0__1_")
     public WebElement txt_answer2;
+
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement btn_send;
     
 
 

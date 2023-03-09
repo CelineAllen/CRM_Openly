@@ -16,7 +16,14 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//span[.='Poll']")
     public WebElement btn_poll;
 
+    @FindBy(xpath = "(//span[@class='bx-vote-block-inp-substitute'])[1]")
+    public WebElement radio_btn_firstAnswer;
 
+    @FindBy(xpath = "(//button[.='Vote'])[1]")
+    public WebElement btn_vote;
+
+    @FindBy(xpath = "(//div[contains(@id,'blg-post-img')])[1]")
+    public WebElement last_poll;
 
 
 

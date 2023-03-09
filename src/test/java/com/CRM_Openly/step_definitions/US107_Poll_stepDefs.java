@@ -24,6 +24,7 @@ public class US107_Poll_stepDefs {
         //WebDriver driver = new ChromeDriver();
         //driver.switchTo().frame(1);
         pollPage.poll_body.sendKeys("title of question");
+        BrowserUtils.sleep(2);
 
     }
 
@@ -44,24 +45,24 @@ public class US107_Poll_stepDefs {
 
     @Then("user click the send button and it create a poll under activity stream")
     public void user_click_the_send_button_and_it_create_a_poll_under_activity_stream() {
-
+        pollPage.btn_send.click();
     }
 
     @Given("user should see the poll under the activity stream")
     public void user_should_see_the_poll_under_the_activity_stream() {
-
+        homePage.last_poll.isDisplayed();
 
     }
 
     @Then("user select one answer in the poll")
     public void user_select_one_answer_in_the_poll() {
-
+        homePage.radio_btn_firstAnswer.click();
 
     }
 
     @Then("user click the vote button")
     public void user_click_the_vote_button() {
-
+        homePage.btn_vote.click();
 
     }
 }
