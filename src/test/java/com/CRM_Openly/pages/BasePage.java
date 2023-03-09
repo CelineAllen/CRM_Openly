@@ -23,6 +23,18 @@ public abstract class BasePage {
             if (each.getText().equalsIgnoreCase(selectionName.trim())){
                 each.click();
                 break;
+
+            }
+        }
+    }
+
+
+    public void selectOption(List<WebElement> selections, String selectionName){
+
+        for (WebElement each : selections) {
+            if (each.getText().equalsIgnoreCase(selectionName.trim())){
+                each.click();
+                break;
             }
         }
     }
