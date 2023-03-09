@@ -8,6 +8,10 @@ Feature: Chat and Calls module in OpenlyCRM application
     Given the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
 
 
-  Scenario: User should be able to access the Chat and Calls module
+  Scenario: Verify access to Chat and Calls module and its sub-modules
     Given User can click the Chat and Calls tap on the right side taps
-    Then user should be able to see four sub taps in chat and calls page Message, Notifications, Settings, Active Stream
+    Then user sees sub modules below
+      | Message(s)      |
+      | Notifications   |
+      | Settings        |
+      | Activity Stream |

@@ -6,7 +6,9 @@ import com.CRM_Openly.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class US98_chatAndCalls_stepDefs {
@@ -22,16 +24,14 @@ public class US98_chatAndCalls_stepDefs {
 
 
 
-    @Then("user should be able to see four sub taps in chat and calls page Message, Notifications, Settings, Active Stream")
-    public void userShouldBeAbleToSeeFourSubTapsInChatAndCallsPageMessageNotificationsSettingsActiveStream() {
-        String actualmsg= chatAndCallsPage.btn_message.getAttribute("title");
-        Assert.assertEquals(actualmsg,"Message(s) ");
-        String actualntf= chatAndCallsPage.btn_notifications.getAttribute("title");
-        Assert.assertEquals(actualntf,"Notifications");
-        String actualstg= chatAndCallsPage.btn_settings.getAttribute("title");
-        Assert.assertEquals(actualstg,"Settings");
-        String actualact= chatAndCallsPage.btn_activeStream.getAttribute("title");
-        Assert.assertEquals(actualact,"Active Stream");
 
+
+    @Then("user sees sub modules below")
+    public void userSeesSubModulesBelow(List<String> expectedSubModules) {
+        List<String> actualSubModules= new ArrayList<>();
+        for(WebElement each : chatAndCallsPage.subModules){
+            actualSubModules.add(each.getAttribute("title").trim());
+        }
+        Assert.assertTrue(actualSubModules.containsAll(expectedSubModules));
     }
 }

@@ -21,8 +21,8 @@ public class ChatAndCallsPage {
     @FindBy(css = "div[title='Activity Stream ']")
     public WebElement btn_activeStream;
 
-    //@FindBy(css = "div[title]")
-    //public List<WebElement> list_options;
+    @FindBy(xpath = "//div[contains(@id,'bx-desktop-tab')]")
+    public List<WebElement> subModules;
 
 
 
