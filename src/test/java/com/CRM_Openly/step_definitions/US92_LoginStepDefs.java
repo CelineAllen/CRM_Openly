@@ -1,8 +1,11 @@
 package com.CRM_Openly.step_definitions;
 
 import com.CRM_Openly.pages.LoginPage;
+import com.CRM_Openly.utilities.BrowserUtils;
 import com.CRM_Openly.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US92_LoginStepDefs {
@@ -50,4 +53,24 @@ public class US92_LoginStepDefs {
     }
 
 
+    @Given("the user is on the login page")
+    public void theUserIsOnTheLoginPage() {
+        //this step is in Hooks @Before
+    }
+
+    @When("the user enters {string} or {string}")
+    public void theUserEntersOr(String userName, String password) {
+
+        loginPage.login(userName,password);
+
+        BrowserUtils.sleep(4);
+    }
+
+    @Then("the user should see {string} message")
+    public void theUserShouldSeeMessage(String expectedErrorMessage) {
+
+        String actualErrorM = loginPage.errorMessage.getText();
+
+        Assert.assertEquals(expectedErrorMessage,actualErrorM);
+    }
 }
