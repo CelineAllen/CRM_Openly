@@ -33,7 +33,6 @@ public class US100_drivePage_StepDefs {
     public void verifyTheUsersViewAllModulesInTheDrivePage(List<String> expectedModules) {
 
 
-
         List<String> actualModules = new ArrayList<>();
 
         for (WebElement each : drivePage.topMenu) {
