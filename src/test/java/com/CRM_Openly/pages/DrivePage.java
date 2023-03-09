@@ -18,7 +18,7 @@ public class DrivePage extends BasePage {
     @FindBy(xpath = "//a[.='Drive']")
     public WebElement drive_btn;
 
-    @FindBy(id = "top_menu_id_docs")
+    @FindBy(className = "main-buttons-item-link")
     public List<WebElement> topMenu;
 
 
