@@ -17,11 +17,17 @@ public class AppreciationPage {
     @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
     public WebElement textZone;
 
+    @FindBy(xpath = "//body[@style='min-height: 184px;']")
+    public WebElement messageType;
+
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendButton;
 
     @FindBy(xpath = "//div[@id='feed-add-post-form-notice-blockblogPostForm']")
     public WebElement negativeMessage;
+
+    @FindBy(xpath = "//div[@id='blg-post-img-117']")
+    public WebElement messageDisplayed;
 
 
 }

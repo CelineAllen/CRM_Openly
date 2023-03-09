@@ -1,9 +1,12 @@
 package com.CRM_Openly.step_definitions;
 
 import com.CRM_Openly.pages.AppreciationPage;
+import com.CRM_Openly.utilities.BrowserUtils;
+import com.CRM_Openly.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class US111_AppreciationPositive {
 
@@ -19,7 +22,11 @@ public class US111_AppreciationPositive {
     @When("user writes {string}")
     public void user_writes(String message) {
 
-        page.textZone.sendKeys(message);
+        Driver.getDriver().switchTo().frame(page.textZone);
+
+        page.messageType.sendKeys(message);
+        BrowserUtils.sleep(2);
+        Driver.getDriver().switchTo().parentFrame();
 
     }
 
@@ -37,11 +44,5 @@ public class US111_AppreciationPositive {
 
     }
 
-    @Then("user should see negative message")
-    public void user_should_see_negative_message() {
-
-
-
-    }
 
 }
