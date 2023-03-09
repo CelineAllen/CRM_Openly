@@ -1,7 +1,7 @@
 Feature: Drive page functionality
 
-  Background: user is already in the login page
-    Given the user logged in with username as "hr1@cybertekschool.com" and password as "UserUser"
+  Background: User is already in the login page
+    Given the user is on the login page
 
   Scenario: user view all modules in the Drive page
 
