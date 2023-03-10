@@ -40,8 +40,6 @@ public class Driver {
              */
             switch (browserType){
 
-
-           
                 case "chrome":
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
