@@ -46,14 +46,10 @@ public class Driver {
                     driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
                     driverPool.get().manage().deleteAllCookies();
                     break;
-//                case "chrome":
-//                    //WebDriverManager.chromedriver().setup();
-//                    driverPool.set(new ChromeDriver());
-//                    driverPool.get().manage().window().maximize();
-//                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//                    break;
+
                 case "firefox":
                     //WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
