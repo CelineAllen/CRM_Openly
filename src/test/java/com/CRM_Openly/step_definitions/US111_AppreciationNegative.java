@@ -12,10 +12,15 @@ public class US111_AppreciationNegative {
 
     AppreciationPage page = new AppreciationPage();
 
-    @Given("user clicks button Message")
+    @Given("user clicks button MORE")
+    public void userClicksButtonMORE() {
+        page.moreButton.click();
+    }
+
+    @Given("user clicks button Appreciation")
     public void user_clicks_button_message() {
 
-        page.messageButton.click();
+        page.appreciationButton.click();
 
     }
     @Given("user clicks button SEND")
@@ -33,5 +38,6 @@ public class US111_AppreciationNegative {
 
 
     }
+
 
 }

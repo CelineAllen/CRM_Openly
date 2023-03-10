@@ -13,8 +13,11 @@ public class AppreciationPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[@id='feed-add-post-form-tab-message']")
-    public WebElement messageButton;
+    @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
+    public WebElement moreButton;
+
+    @FindBy(xpath = "//span[@class='menu-popup-item menu-popup-no-icon feed-add-post-form-grat feed-add-post-form-grat-more ']")
+    public WebElement appreciationButton;
 
     @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
     public WebElement textZone;
