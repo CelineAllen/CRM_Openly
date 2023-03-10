@@ -9,7 +9,7 @@ Feature: Appreciation message
       Given user clicks Message button
       And user writes "You did great!"
       And user clicks SEND button
-      Then message should display
+      Then message "You did great!" should display
 
       @PRG17-141
     Scenario: user should see negative message

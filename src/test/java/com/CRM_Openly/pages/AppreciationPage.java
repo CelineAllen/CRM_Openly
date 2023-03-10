@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class AppreciationPage {
 
     public AppreciationPage(){
@@ -26,8 +28,8 @@ public class AppreciationPage {
     @FindBy(xpath = "//div[@id='feed-add-post-form-notice-blockblogPostForm']")
     public WebElement negativeMessage;
 
-    @FindBy(xpath = "//div[@id='blg-post-img-117']")
-    public WebElement messageDisplayed;
+    @FindBy(xpath = "//div[@class='feed-post-text-block-inner-inner']")
+    public List <WebElement> messageDisplayed;
 
 
 }

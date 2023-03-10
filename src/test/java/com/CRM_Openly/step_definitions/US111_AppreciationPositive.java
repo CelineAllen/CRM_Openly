@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 public class US111_AppreciationPositive {
 
@@ -37,10 +38,24 @@ public class US111_AppreciationPositive {
 
     }
 
-    @Then("message should display")
-    public void message_should_display() {
+    @Then("message {string} should display")
+    public void message_should_display(String message) {
+
+        BrowserUtils.sleep(2);
 
 
+        for (WebElement each : page.messageDisplayed){
+
+        if (each.getText().equals(message)){
+
+
+            Assert.assertTrue(each.isDisplayed());
+
+        }
+
+        //Assert.assertTrue(each.getText().equals(message));
+
+    }
 
     }
 
