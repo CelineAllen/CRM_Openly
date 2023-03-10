@@ -15,8 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/CRM_Openly/step_definitions",
         dryRun = false,
-        tags = "@PRG17-140",
-        tags = "",
+        tags = "@PRG17-140 or @PRG17-141",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
