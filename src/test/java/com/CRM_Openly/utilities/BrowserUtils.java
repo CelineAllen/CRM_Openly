@@ -30,6 +30,8 @@ public class BrowserUtils {
         }
     }
 
+
+
     public static void switchWindowAndVerify(String expectedInURL, String expectedInTitle){
 
         //Return and store all window handles in a Set.
@@ -223,7 +225,7 @@ public class BrowserUtils {
      * @param time
      * @return
      */
-    public static WebElement waitForClickablility(WebElement element, int time) {
+    public static WebElement waitForClickability(WebElement element, int time) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
