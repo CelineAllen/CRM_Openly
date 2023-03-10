@@ -14,6 +14,7 @@ Feature: Appreciation message
 
       @PRG17-141
     Scenario: user should see negative message
+        Given user clicks button MORE
       Given user clicks button Appreciation
       And user clicks button SEND
       Then user should see "The message title is not specified" message
