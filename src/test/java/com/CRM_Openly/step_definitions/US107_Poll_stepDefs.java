@@ -6,8 +6,11 @@ import com.CRM_Openly.utilities.BrowserUtils;
 import com.CRM_Openly.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class US107_Poll_stepDefs {
     HomePage homePage = new HomePage();
@@ -16,17 +19,27 @@ public class US107_Poll_stepDefs {
     @Given("user click poll tab on the home page")
     public void user_click_poll_tab_on_the_home_page() {
         homePage.btn_poll.click();
+        BrowserUtils.sleep(2);
 
     }
 
     @Then("user enter the data in to poll body")
     public void user_enter_the_data_in_to_poll_body() {
-        //WebDriver driver = new ChromeDriver();
-        //driver.switchTo().frame(1);
-        pollPage.poll_body.sendKeys("title of question");
-        BrowserUtils.sleep(2);
+        Driver.getDriver().switchTo().frame(homePage.messageBoxIframe);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys("hello").perform();
+        Driver.getDriver().switchTo().parentFrame();
 
+        //WebElement pollbodybox = Driver.getDriver().findElement(By.xpath("//body[@contenteditable='true']"));
+        //Driver.getDriver().switchTo().frame(pollbodybox);
+        //pollbodybox.click();
+
+        //Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']"))
+
+        //pollbodybox.sendKeys("hello");
     }
+
+
 
     @Then("user enter the question in question box")
     public void user_enter_the_question_in_question_box() {
