@@ -13,5 +13,20 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//a[@class='menu-item-link']")
+    public List<WebElement> menuOptions;    // left panel options as a List
+
+    public void selectOption(List<WebElement> selections, String selectionName){
+
+        for (WebElement each : selections) {
+            if (each.getText().equalsIgnoreCase(selectionName.trim())){
+                each.click();
+                break;
+
+            }
+        }
+    }
+
+
 
 }

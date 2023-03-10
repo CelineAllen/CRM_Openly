@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class DrivePage {
+public class DrivePage extends BasePage {
+
 
     public DrivePage(){
 
@@ -17,7 +18,7 @@ public class DrivePage {
     @FindBy(xpath = "//a[.='Drive']")
     public WebElement drive_btn;
 
-    @FindBy(id = "top_menu_id_docs")
+    @FindBy(className = "main-buttons-item-link")
     public List<WebElement> topMenu;
 
 
