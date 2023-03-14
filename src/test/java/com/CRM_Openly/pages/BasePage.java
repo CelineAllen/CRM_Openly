@@ -16,10 +16,10 @@ public abstract class BasePage {
     @FindBy(xpath = "//a[@class='menu-item-link']")
     public List<WebElement> menuOptions;    // left panel options as a List
 
-    public void selectOption(List<WebElement> selections, String selectionName){
+    public void selectOption(List<WebElement> selections, String selectionName) {
 
         for (WebElement each : selections) {
-            if (each.getText().equalsIgnoreCase(selectionName.trim())){
+            if (each.getText().equalsIgnoreCase(selectionName.trim())) {
                 each.click();
                 break;
 
@@ -28,12 +28,8 @@ public abstract class BasePage {
     }
 
 
-
     @FindBy(id = "user-block")
     public WebElement btn_userProfile;
 
 
-
-
-
-
+}
