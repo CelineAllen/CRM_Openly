@@ -1,4 +1,6 @@
+@smoke
 Feature: OpenlyCRM logout features
+
 
   Agile story: As a user, I should be able to log out from the CRM app.
   The “Log out” option should be displayed when the user clicks the user profile from the homepage
